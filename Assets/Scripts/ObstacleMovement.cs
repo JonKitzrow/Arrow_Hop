@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class ObstacleMovement : MonoBehaviour
 {
@@ -20,5 +21,11 @@ public class ObstacleMovement : MonoBehaviour
         {
           Destroy(this);
         }
+    }
+
+    void OnTriggerEnter2D(Collider2D other)
+    {
+      Debug.Log("Hit!");
+      SceneManager.LoadScene("GameOver");
     }
 }

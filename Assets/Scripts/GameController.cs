@@ -32,7 +32,7 @@ public class GameController : MonoBehaviour
     void Update()
     {
         // move step
-        if (Input.GetKeyDown("space") && moveCharge >= 1f)
+        if ((Input.GetKeyDown("space") || Input.GetMouseButtonDown(0)) && moveCharge >= 1f)
         {
           // update track value
           if (track + direction >= 0 && track + direction <= 3) // skip if the resulting value is out of bounds (should be impossible under normal operating parameters)
